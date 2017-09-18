@@ -104,7 +104,7 @@ func runSQL(quitContext context.Context, db database, sql string, key string, pr
 	}
 
 	mysql := "mysql"
-	options := fmt.Sprintf(" -Nsr %v%v%v%v -e ", userOption, passOption, hostOption, db.DbName)
+	options := fmt.Sprintf(" -vt %v%v%v%v -e ", userOption, passOption, hostOption, db.DbName)
 
 	var cmd *exec.Cmd
 	if db.AppServer != "" {
